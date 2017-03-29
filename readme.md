@@ -28,5 +28,9 @@ roscpp, tf2, tf2_ros
 
 ## Usage:
 ```$xslt
-roslaunch data_discovery data_vis.launch rosbag_file:=/media/yousof/Volume/SDC/Challenges/DIDI/Dataset/data/approach_3.bag
+git clone https://github.com/didi-challenge-team-khodro/data_analysis.git
+cd data_analysis
+catkin_make
+source devel/setup.sh
+roslaunch data_discovery data_vis.launch rosbag_file:=path/of/bag/file
 ```
