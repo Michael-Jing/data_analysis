@@ -22,8 +22,16 @@ The node should exactly work like:
 ```$xslt
 rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 base_link velodyne
 ```
+### tf_velodyne_to_baselink.cpp
+To find the correct position of the obstacle relative to capture car, we need to know the absoulte 
+pose of the capture car (or relative to GPS frame)
 
-#### Dependencies:
+Here the pose is calculated based on the postion and speed values of the capture car.
+
+### tf_baselink_to_gps_using_position.cpp
+Pose here is calculated based on the position only.
+
+## Dependencies:
 roscpp, tf2, tf2_ros
 
 ## Usage:
